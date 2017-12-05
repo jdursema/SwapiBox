@@ -1,14 +1,38 @@
 import React, { Component } from 'react';
 import './App.css';
-import SideBar from '../SideBar/SideBar'
-import Header from '../Header/Header'
-import MainSection from '../MainSection/MainSection'
+import ScrollingOpening from './ScrollingOpening/ScrollingOpening'
+import Header from './Header/Header'
+import MainSection from './MainSection/MainSection'
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      OpeningCrawl: ''
+    }
+  }
+  
+  componentDidMount() {
+    this.getData();
+  }
+
+  getData() {
+    const randomNumber = Math.floor(Math.random()*(7-1))+1
+    fetch(`https://swapi.co/api/films/${randomNumber}/`)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      this.setState({OpeningCrawl: {body: data.opening_crawl, title: data.title}
+      })
+    })
+  }
+      
+  
+
   render() {
     return (
       <div className="App">
-       <SideBar />
+       <ScrollingOpening OpeningCrawl={this.state.OpeningCrawl} />
        <Header/>
        <MainSection />
       </div>
