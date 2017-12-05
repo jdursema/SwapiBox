@@ -1,10 +1,16 @@
 import React from 'react'
-import CardContainer from '../CardContainer/CardContainer'
+import './MainSection.css'
+import CardContainer from './CardContainer/CardContainer'
 
 const MainSection = () => {
   return (
-    <div>
-      <p>This will be the main section</p>
+    <div className='main-section'>
+      <div className= 'btn-bar'>
+        <button className='People button'>People</button>
+        <button className='Planets button'>Planets</button>
+        <button className='Vehicles button'>Vehicles</button>
+
+      </div>
       <CardContainer />
     </div>
   )

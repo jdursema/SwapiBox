@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './Header.css';
 
-const Header = () => {
+const Header = ({Favorites}) => {
   return(
-    <div>
-      StarWars: Return of the Swapi Box
+    <div className='header'>
+      <div className='btn-container'>
+        <button className='favorite-btn'>Favorites {Favorites.length}</button>
+      </div>
+      <h1>Chalmun's Cantina</h1>
     </div>
   )
 }

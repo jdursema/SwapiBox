@@ -8,7 +8,8 @@ class App extends Component {
   constructor(){
     super();
     this.state={
-      OpeningCrawl: ''
+      OpeningCrawl: '',
+      Favorites: []
     }
   }
   
@@ -18,13 +19,13 @@ class App extends Component {
 
   getData() {
     const randomNumber = Math.floor(Math.random()*(7-1))+1
-    fetch(`https://swapi.co/api/films/${randomNumber}/`)
-    .then(res => res.json())
-    .then(data => {
-      console.log(data)
-      this.setState({OpeningCrawl: {body: data.opening_crawl, title: data.title}
-      })
-    })
+    // fetch(`https://swapi.co/api/films/${randomNumber}/`)
+    // .then(res => res.json())
+    // .then(data => {
+    //   console.log(data)
+    //   this.setState({OpeningCrawl: {body: data.opening_crawl, title: data.title}
+    //   })
+    // })
   }
       
   
@@ -32,8 +33,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       <ScrollingOpening OpeningCrawl={this.state.OpeningCrawl} />
-       <Header/>
+       {/* <ScrollingOpening OpeningCrawl={this.state.OpeningCrawl} /> */}
+       <Header Favorites={this.state.Favorites}/>
        <MainSection />
       </div>
     );
