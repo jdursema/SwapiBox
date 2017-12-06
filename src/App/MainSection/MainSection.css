@@ -8,6 +8,11 @@
   padding: 1% 0;
 }
 
+.button:hover{
+  background-color: darkblue;
+  color: white;
+}
+
 .btn-bar{
   display: flex;
   flex-direction: row;
