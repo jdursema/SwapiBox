@@ -83,7 +83,7 @@ class App extends Component {
     return Promise.all(unresolvedPromises)
   }
 
-  fetchResidents = (apiArray) =>{
+  fetchResidents = (apiArray) => {
     const unresolvedPromises = apiArray.map(async (api)=>{
       const fetchResident = await fetch(api)
       const residentData = await fetchResident.json()
@@ -93,7 +93,26 @@ class App extends Component {
     return Promise.all(unresolvedPromises)
   }
 
+  addToFavorites = (infoObj) => {
+    let checkForDup = this.state.Favorites.filter((Obj)=>{
+      return Obj.name === infoObj.name
+    })
 
+    if(checkForDup < 1){
+      const favoritedArray = [...this.state.Favorites, infoObj]
+      this.setState({Favorites: favoritedArray})
+    } else{
+      const removedItemArray = this.state.Favorites.filter((Obj)=>{
+        return Obj.name != infoObj.name
+      })
+      this.setState({Favorites: removedItemArray})
+    }
+   
+  }
+
+  displayFavorites = () =>{
+    this.setState({Cards: this.state.Favorites})
+  }
       
   
 
@@ -101,8 +120,8 @@ class App extends Component {
     return (
       <div className="App">
        {/* <ScrollingOpening OpeningCrawl={this.state.OpeningCrawl} /> */}
-       <Header Favorites={this.state.Favorites}/>
-       <MainSection fetchCharacterCardInfo={this.fetchCharacterCardInfo} fetchVehicleCardInfo={this.fetchVehicleCardInfo} fetchPlanetCardInfo={this.fetchPlanetCardInfo} cardsInfo={this.state.Cards}/>
+       <Header Favorites={this.state.Favorites} displayFavorites={this.displayFavorites}/>
+       <MainSection fetchCharacterCardInfo={this.fetchCharacterCardInfo} fetchVehicleCardInfo={this.fetchVehicleCardInfo} fetchPlanetCardInfo={this.fetchPlanetCardInfo} cardsInfo={this.state.Cards} addToFavorites={this.addToFavorites}  />
       </div>
     );
   }
