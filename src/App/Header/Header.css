@@ -1,0 +1,21 @@
+h1{
+  color: yellow;
+  font-size: 50px;
+  margin: 0;
+}
+
+.favorite-btn{
+  background-color: skyblue;
+  font-size: 20px;
+  width: 150px;
+  border-radius: 0;
+  border: none;
+  margin: 1% 0;
+  padding: 1% 0;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
