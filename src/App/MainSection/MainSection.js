@@ -8,7 +8,7 @@ const MainSection = ({fetchCharacterCardInfo, fetchVehicleCardInfo, fetchPlanetC
       <div className= 'btn-bar'>
         <button className='People button' onClick={()=>{fetchCharacterCardInfo()}}>People</button>
         <button className='Vehicles button' onClick={()=>{fetchVehicleCardInfo()}}>Vehicles</button>
-        <button className='Planets button' onClick={()=>{fetchPlanetCardInfo}}>Planets</button>
+        <button className='Planets button' onClick={()=>{fetchPlanetCardInfo()}}>Planets</button>
 
       </div>
       <CardContainer />

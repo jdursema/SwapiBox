@@ -69,8 +69,30 @@ class App extends Component {
     return Promise.all(unresolvedPromises)
   }
 
-  fetchPlanetCardInfo = () => {
-    console.log(4)
+  fetchPlanetCardInfo = async () => {
+    const fetchPlanets = await fetch (`https://swapi.co/api/planets/`)
+    const planetsData = await fetchPlanets.json()
+    const planetObjArray = await this.createPlanetObj(planetsData.results)
+    this.setState({Planets: planetObjArray})
+  }
+
+  createPlanetObj =  (planetArray) => {
+    const unresolvedPromises = planetArray.map( async (planet) => {
+      const fetchResidents = await this.fetchResidents(planet.residents)
+      return {name: planet.name, terrain: planet.terrain, population: planet.population, climate: planet.climate, residents: fetchResidents}
+    })
+
+    return Promise.all(unresolvedPromises)
+  }
+
+  fetchResidents = (apiArray) =>{
+    const unresolvedPromises = apiArray.map(async (api)=>{
+      const fetchResident = await fetch(api)
+      const residentData = await fetchResident.json()
+      return residentData.name
+    }) 
+    
+    return Promise.all(unresolvedPromises)
   }
 
 
@@ -82,7 +104,7 @@ class App extends Component {
       <div className="App">
        {/* <ScrollingOpening OpeningCrawl={this.state.OpeningCrawl} /> */}
        <Header Favorites={this.state.Favorites}/>
-       <MainSection fetchCharacterCardInfo={this.fetchCharacterCardInfo} fetchVehicleCardInfo={this.fetchVehicleCardInfo} fetchPlanetCardInfo={this.fetchVehicleCardInfo} />
+       <MainSection fetchCharacterCardInfo={this.fetchCharacterCardInfo} fetchVehicleCardInfo={this.fetchVehicleCardInfo} fetchPlanetCardInfo={this.fetchPlanetCardInfo} />
       </div>
     );
   }
