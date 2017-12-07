@@ -12,7 +12,10 @@ class App extends Component {
     super();
     this.state={
       Favorites: [],
-      Cards: []
+      Cards: [],
+      People: [],
+      Vehicles: [],
+      Planets: []
     }
   }
   
@@ -34,10 +37,13 @@ class App extends Component {
   }
 
   fetchCharacterCardInfo = async () => {
-    const fetchPeople = await fetch (`https://swapi.co/api/people/`)
-    const peopleData = await fetchPeople.json()
-    const people = await this.fetchHomePlanet(peopleData.results)
-    this.setState({Cards: people})
+    if(this.state.People.length === 0){
+      const fetchPeople = await fetch (`https://swapi.co/api/people/`)
+      const peopleData = await fetchPeople.json()
+      const people = await this.fetchHomePlanet(peopleData.results)
+      this.setState({People: people})
+    }
+    this.setState({Cards: this.state.People})
   }
 
  
@@ -54,10 +60,14 @@ class App extends Component {
   }
 
   fetchVehicleCardInfo = async () => {
-    const fetchVehicles = await fetch (`https://swapi.co/api/vehicles/`)
-    const vehicleData = await fetchVehicles.json()
-    const vehicleObjArray = await this.createVehicleObj(vehicleData.results)
-    this.setState({Cards: vehicleObjArray})
+    if(this.state.Vehicles.length === 0){
+      const fetchVehicles = await fetch (`https://swapi.co/api/vehicles/`)
+      const vehicleData = await fetchVehicles.json()
+      const vehicleObjArray = await this.createVehicleObj(vehicleData.results)
+      this.setState({Vehicles: vehicleObjArray})
+    }
+    this.setState({Cards: this.state.Vehicles})
+    
   }
 
   createVehicleObj = (vehicleArray) => {
@@ -68,16 +78,20 @@ class App extends Component {
   }
 
   fetchPlanetCardInfo = async () => {
-    const fetchPlanets = await fetch (`https://swapi.co/api/planets/`)
-    const planetsData = await fetchPlanets.json()
-    const planetObjArray = await this.createPlanetObj(planetsData.results)
-    this.setState({Cards: planetObjArray})
+    if (this.state.Planets.length === 0){
+      const fetchPlanets = await fetch (`https://swapi.co/api/planets/`)
+      const planetsData = await fetchPlanets.json()
+      const planetObjArray = await this.createPlanetObj(planetsData.results)
+      this.setState({Planets: planetObjArray})
+    }
+    this.setState({Cards: this.state.Planets})
+    
   }
 
   createPlanetObj =  (planetArray) => {
     const unresolvedPromises = planetArray.map( async (planet) => {
       const fetchResidents = await this.fetchResidents(planet.residents)
-      return {name: planet.name, data: {terrain: planet.terrain, population: planet.population, climate: planet.climate, residents: fetchResidents}}
+      return {name: planet.name, data: {terrain: planet.terrain, population: planet.population, climate: planet.climate, residents: fetchResidents.join(',\n')}}
     })
 
     return Promise.all(unresolvedPromises)

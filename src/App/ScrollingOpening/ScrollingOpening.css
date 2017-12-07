@@ -1,7 +1,7 @@
 
 .scrolling-opening{
   position: fixed;
-  background-image: url(stars.png);
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 10;
