@@ -11,10 +11,8 @@ class App extends Component {
   constructor(){
     super();
     this.state={
-      People: [],
       Favorites: [],
-      OpeningCrawl: {},
-      Vehicles: []
+      Cards: []
     }
   }
   
@@ -39,7 +37,7 @@ class App extends Component {
     const fetchPeople = await fetch (`https://swapi.co/api/people/`)
     const peopleData = await fetchPeople.json()
     const people = await this.fetchHomePlanet(peopleData.results)
-    this.setState({People: people})
+    this.setState({Cards: people})
   }
 
  
@@ -50,7 +48,7 @@ class App extends Component {
       let homeworldData = await homeworldFetch.json()
       let speciesFetch = await fetch(character.species)
       let speciesData = await speciesFetch.json()
-      return {name: character.name, homeworld: homeworldData.name, population: homeworldData.population, species: speciesData.name}
+      return {name: character.name, data: { homeworld: homeworldData.name, population: homeworldData.population, species: speciesData.name}}
     })
     return Promise.all(unresolvedPromises)
   }
@@ -59,12 +57,12 @@ class App extends Component {
     const fetchVehicles = await fetch (`https://swapi.co/api/vehicles/`)
     const vehicleData = await fetchVehicles.json()
     const vehicleObjArray = await this.createVehicleObj(vehicleData.results)
-    this.setState({Vehicles: vehicleObjArray})
+    this.setState({Cards: vehicleObjArray})
   }
 
   createVehicleObj = (vehicleArray) => {
     const unresolvedPromises = vehicleArray.map( (vehicle) => {
-      return {name: vehicle.name, model: vehicle.model, class: vehicle.vehicle_class, capacity: vehicle.passengers}
+      return {name: vehicle.name, data: {model: vehicle.model, class: vehicle.vehicle_class, capacity: vehicle.passengers}}
     })
     return Promise.all(unresolvedPromises)
   }
@@ -73,13 +71,13 @@ class App extends Component {
     const fetchPlanets = await fetch (`https://swapi.co/api/planets/`)
     const planetsData = await fetchPlanets.json()
     const planetObjArray = await this.createPlanetObj(planetsData.results)
-    this.setState({Planets: planetObjArray})
+    this.setState({Cards: planetObjArray})
   }
 
   createPlanetObj =  (planetArray) => {
     const unresolvedPromises = planetArray.map( async (planet) => {
       const fetchResidents = await this.fetchResidents(planet.residents)
-      return {name: planet.name, terrain: planet.terrain, population: planet.population, climate: planet.climate, residents: fetchResidents}
+      return {name: planet.name, data: {terrain: planet.terrain, population: planet.population, climate: planet.climate, residents: fetchResidents}}
     })
 
     return Promise.all(unresolvedPromises)
@@ -104,7 +102,7 @@ class App extends Component {
       <div className="App">
        {/* <ScrollingOpening OpeningCrawl={this.state.OpeningCrawl} /> */}
        <Header Favorites={this.state.Favorites}/>
-       <MainSection fetchCharacterCardInfo={this.fetchCharacterCardInfo} fetchVehicleCardInfo={this.fetchVehicleCardInfo} fetchPlanetCardInfo={this.fetchPlanetCardInfo} />
+       <MainSection fetchCharacterCardInfo={this.fetchCharacterCardInfo} fetchVehicleCardInfo={this.fetchVehicleCardInfo} fetchPlanetCardInfo={this.fetchPlanetCardInfo} cardsInfo={this.state.Cards}/>
       </div>
     );
   }
