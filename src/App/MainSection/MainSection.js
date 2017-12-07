@@ -2,7 +2,7 @@ import React from 'react'
 import './MainSection.css'
 import CardContainer from './CardContainer/CardContainer'
 
-const MainSection = ({fetchCharacterCardInfo, fetchVehicleCardInfo, fetchPlanetCardInfo}) => {
+const MainSection = ({fetchCharacterCardInfo, fetchVehicleCardInfo, fetchPlanetCardInfo, cardsInfo}) => {
   return (
     <div className='main-section'>
       <div className= 'btn-bar'>
@@ -11,7 +11,7 @@ const MainSection = ({fetchCharacterCardInfo, fetchVehicleCardInfo, fetchPlanetC
         <button className='Planets button' onClick={()=>{fetchPlanetCardInfo()}}>Planets</button>
 
       </div>
-      <CardContainer />
+      <CardContainer cardsInfo = {cardsInfo} />
     </div>
   )
 }
