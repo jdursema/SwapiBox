@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snap shot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Header
+    Favorites={
+        Array [
+            Object {
+              "data": Object {
+                "Homeworld": "earth",
+              },
+              "name": "Julie",
+            },
+            Object {
+              "data": Object {
+                "Residents": "Goofy",
+              },
+              "name": "Pluto",
+            },
+          ]
+    }
+    displayFavorites={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="btn-container"
+>
+          <button
+                    className="favorite-btn"
+                    onClick={[Function]}
+          >
+                    Favorites 
+                    2
+          </button>
+</div>,
+        <h1>
+          Return of the SwapiBox
+</h1>,
+      ],
+      "className": "header",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <button
+            className="favorite-btn"
+            onClick={[Function]}
+>
+            Favorites 
+            2
+</button>,
+          "className": "btn-container",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Favorites ",
+              2,
+            ],
+            "className": "favorite-btn",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Favorites ",
+            2,
+          ],
+          "type": "button",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Return of the SwapiBox",
+        },
+        "ref": null,
+        "rendered": "Return of the SwapiBox",
+        "type": "h1",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="btn-container"
+>
+            <button
+                        className="favorite-btn"
+                        onClick={[Function]}
+            >
+                        Favorites 
+                        2
+            </button>
+</div>,
+          <h1>
+            Return of the SwapiBox
+</h1>,
+        ],
+        "className": "header",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              className="favorite-btn"
+              onClick={[Function]}
+>
+              Favorites 
+              2
+</button>,
+            "className": "btn-container",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Favorites ",
+                2,
+              ],
+              "className": "favorite-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Favorites ",
+              2,
+            ],
+            "type": "button",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Return of the SwapiBox",
+          },
+          "ref": null,
+          "rendered": "Return of the SwapiBox",
+          "type": "h1",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

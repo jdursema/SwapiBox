@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { shallow, mount } from 'enzyme';
 
-it('renders without crashing', () => {
-  // const div = document.createElement('div');
-  // ReactDOM.render(<App />, div);
+describe('App', () =>{   
+  it('should be defined', () => {
+    const renderedApp = shallow(<App />, {disableLifecycleMethods: true});  
+    expect(renderedApp).toBeDefined();
+  });
 });
+

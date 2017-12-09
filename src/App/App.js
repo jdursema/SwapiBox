@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import ScrollingOpening from './ScrollingOpening/ScrollingOpening';
-import Header from './Header/Header';
-import MainSection from './MainSection/MainSection';
+import ScrollingOpening from './Components/ScrollingOpening/ScrollingOpening';
+import Header from './Components/Header/Header';
+import MainSection from './Components/MainSection/MainSection';
 import { fetchCharacterInfo } from './helper';
 import { fetchVehicleInfo } from './helper2';
 import { fetchPlanetInfo } from './helper3';
-
 
 class App extends Component {
   constructor() {
@@ -20,7 +19,7 @@ class App extends Component {
       Planets: []
     };
   }
-  
+
   componentDidMount() {
     this.getData();
   }
@@ -46,17 +45,13 @@ class App extends Component {
     this.setState({Cards: this.state.People});
   }
 
-
   fetchVehicleCardInfo = async () => {
     if (this.state.Vehicles.length === 0) {
       const vehicleObjArray = await fetchVehicleInfo();
       this.setState({Vehicles: vehicleObjArray});
     }
     this.setState({Cards: this.state.Vehicles});
-    
   }
-
-  
 
   fetchPlanetCardInfo = async () => {
     if (this.state.Planets.length === 0) {
@@ -65,8 +60,6 @@ class App extends Component {
     }
     this.setState({Cards: this.state.Planets});   
   }
-
-
 
   addToFavorites = (infoObj) => {
     let checkForDup = this.state.Favorites.filter((Obj)=>{
@@ -89,8 +82,6 @@ class App extends Component {
     this.setState({Cards: this.state.Favorites});
   }
       
-  
-
   render() {
     return (
       <div className="App">

@@ -1,6 +1,6 @@
 import React from 'react';
 import './MainSection.css';
-import CardContainer from './CardContainer/CardContainer';
+import CardContainer from '../CardContainer/CardContainer';
 import PropTypes from 'prop-types';
 
 const MainSection = ({fetchCharacterCardInfo, fetchVehicleCardInfo, fetchPlanetCardInfo, cardsInfo, addToFavorites}) => {

@@ -13,7 +13,7 @@ const createPlanetObj = (planetArray) => {
     return {name: planet.name, data: {terrain: planet.terrain, population: planet.population, climate: planet.climate, residents: fetchedResidents.join(',\n')}};
   });
   return Promise.all(unresolvedPromises);
-}
+};
 
 const fetchResidents = (apiArray) => {
   const unresolvedPromises = apiArray.map(async (api)=>{
@@ -23,4 +23,4 @@ const fetchResidents = (apiArray) => {
   }); 
   
   return Promise.all(unresolvedPromises);
-}
+};
