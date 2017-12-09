@@ -6,9 +6,8 @@
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.0.5",
     "eslint": "^4.12.1",
-    "eslint-plugins-jsx-ally": "^6.0.2"
-    
-    
+    "eslint-plugins-jsx-ally": "^6.0.2",
+    "react-test-renderer": "^16.2.0"
   },
   "dependencies": {
     "react": "^16.2.0",
@@ -25,5 +24,4 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "eslint": "./node_modules/eslint/bin/eslint.js ./src/App/*.js .src/App/*/*.js ./src/App/*/*/*.js ./src/App/*/*/*/*.js ./src/App/*/*/*/*/*.js"
   }
-  
 }
