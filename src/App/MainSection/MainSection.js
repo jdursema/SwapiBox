@@ -1,19 +1,38 @@
-import React from 'react'
-import './MainSection.css'
-import CardContainer from './CardContainer/CardContainer'
+import React from 'react';
+import './MainSection.css';
+import CardContainer from './CardContainer/CardContainer';
+import PropTypes from 'prop-types';
 
 const MainSection = ({fetchCharacterCardInfo, fetchVehicleCardInfo, fetchPlanetCardInfo, cardsInfo, addToFavorites}) => {
   return (
     <div className='main-section'>
-      <div className= 'btn-bar'>
-        <button className='People button' onClick={()=>{fetchCharacterCardInfo()}}>People</button>
-        <button className='Vehicles button' onClick={()=>{fetchVehicleCardInfo()}}>Vehicles</button>
-        <button className='Planets button' onClick={()=>{fetchPlanetCardInfo()}}>Planets</button>
+      <div className='btn-bar'>
+        <button 
+          className='People button' 
+          onClick={() => {fetchCharacterCardInfo()}}>People
+        </button>
+        <button 
+          className='Vehicles button' 
+          onClick={() => {fetchVehicleCardInfo()}}>Vehicles
+        </button>
+        <button
+          className='Planets button' 
+          onClick={() => {fetchPlanetCardInfo()}}>Planets</button>
 
       </div>
-      <CardContainer cardsInfo={cardsInfo} addToFavorites={addToFavorites} />
+      <CardContainer 
+        cardsInfo={cardsInfo} 
+        addToFavorites={addToFavorites} />
     </div>
-  )
-}
+  );
+};
 
-export default MainSection
+export default MainSection;
+
+Card.propTypes = {
+  fetchCharacterCardInfo: PropTypes.func,
+  fetchVehicleCardInfo: PropTypes.func,
+  fetchPlanetCardInfo: PropTypes.func,
+  cardsInfo: PropTypes.array,
+  addToFavorites: PropTypes.func
+};
