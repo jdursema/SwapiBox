@@ -3,7 +3,10 @@ import './App.css';
 import ScrollingOpening from './ScrollingOpening/ScrollingOpening';
 import Header from './Header/Header';
 import MainSection from './MainSection/MainSection';
-import helper from './helper';
+import { fetchCharacterInfo } from './helper';
+import { fetchVehicleInfo } from './helper2';
+import { fetchPlanetInfo } from './helper3';
+
 
 class App extends Component {
   constructor() {
@@ -37,72 +40,33 @@ class App extends Component {
 
   fetchCharacterCardInfo = async () => {
     if (this.state.People.length === 0) {
-      const fetchPeople = await fetch(`https://swapi.co/api/people/`);
-      const peopleData = await fetchPeople.json();
-      const people = await this.fetchHomePlanet(peopleData.results);
+      const people = await fetchCharacterInfo();
       this.setState({People: people});
     }
     this.setState({Cards: this.state.People});
   }
 
- 
-
-  fetchHomePlanet = (characterArray) => {
-    const unresolvedPromises = characterArray.map(async (character) => {
-      let homeworldFetch = await fetch(character.homeworld);
-      let homeworldData = await homeworldFetch.json();
-      let speciesFetch = await fetch(character.species);
-      let speciesData = await speciesFetch.json();
-      return {name: character.name, data: { homeworld: homeworldData.name, population: homeworldData.population, species: speciesData.name}};
-    });
-    return Promise.all(unresolvedPromises);
-  }
 
   fetchVehicleCardInfo = async () => {
     if (this.state.Vehicles.length === 0) {
-      const fetchVehicles = await fetch(`https://swapi.co/api/vehicles/`);
-      const vehicleData = await fetchVehicles.json();
-      const vehicleObjArray = await this.createVehicleObj(vehicleData.results);
+      const vehicleObjArray = await fetchVehicleInfo();
       this.setState({Vehicles: vehicleObjArray});
     }
     this.setState({Cards: this.state.Vehicles});
     
   }
 
-  createVehicleObj = (vehicleArray) => {
-    const unresolvedPromises = vehicleArray.map( (vehicle) => {
-      return {name: vehicle.name, data: {model: vehicle.model, class: vehicle.vehicle_class, capacity: vehicle.passengers}};
-    });
-    return Promise.all(unresolvedPromises);
-  }
+  
 
   fetchPlanetCardInfo = async () => {
     if (this.state.Planets.length === 0) {
-      const fetchPlanets = await fetch(`https://swapi.co/api/planets/`);
-      const planetsData = await fetchPlanets.json();
-      const planetObjArray = await this.createPlanetObj(planetsData.results);
+      const planetObjArray = await fetchPlanetInfo();
       this.setState({Planets: planetObjArray});
     }
     this.setState({Cards: this.state.Planets});   
   }
 
-  createPlanetObj = (planetArray) => {
-    const unresolvedPromises = planetArray.map( async (planet) => {
-      const fetchResidents = await this.fetchResidents(planet.residents);
-      return {name: planet.name, data: {terrain: planet.terrain, population: planet.population, climate: planet.climate, residents: fetchResidents.join(',\n')}};
-    });
-    return Promise.all(unresolvedPromises);
-  }
 
-  fetchResidents = (apiArray) => {
-    const unresolvedPromises = apiArray.map(async (api)=>{
-      const fetchResident = await fetch(api);
-      const residentData = await fetchResident.json();
-      return residentData.name;
-    }); 
-    
-    return Promise.all(unresolvedPromises);
-  }
 
   addToFavorites = (infoObj) => {
     let checkForDup = this.state.Favorites.filter((Obj)=>{

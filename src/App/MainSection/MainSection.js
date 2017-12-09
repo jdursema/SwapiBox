@@ -29,7 +29,7 @@ const MainSection = ({fetchCharacterCardInfo, fetchVehicleCardInfo, fetchPlanetC
 
 export default MainSection;
 
-Card.propTypes = {
+MainSection.propTypes = {
   fetchCharacterCardInfo: PropTypes.func,
   fetchVehicleCardInfo: PropTypes.func,
   fetchPlanetCardInfo: PropTypes.func,
