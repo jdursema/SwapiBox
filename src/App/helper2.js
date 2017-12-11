@@ -8,7 +8,13 @@ export const fetchVehicleInfo = async() => {
 
 const createVehicleObj = (vehicleArray) => {
   const unresolvedPromises = vehicleArray.map( (vehicle) => {
-    return {name: vehicle.name, data: {model: vehicle.model, class: vehicle.vehicle_class, capacity: vehicle.passengers}};
+    return {
+      name: vehicle.name, 
+      type: 'vehicle-card', 
+      Data: {
+        Model: vehicle.model, 
+        Class: vehicle.vehicle_class, 
+        Capacity: vehicle.passengers}};
   });
   return Promise.all(unresolvedPromises);
 };

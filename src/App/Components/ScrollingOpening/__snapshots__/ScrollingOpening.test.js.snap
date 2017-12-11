@@ -29,205 +29,16 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <div
-        className="crawl"
+      "children": Array [
+        <button
+          className="close-btn"
+          onClick={[Function]}
 >
+          X
+</button>,
         <div
-                className="fade"
-        />
-        <h1
-                className="scrolling-opening-title"
-        >
-                Star Wars!
-        </h1>
-        <div>
-                <div>
-                        <p>
-                                Yogurt
-                        </p>
-                        <p>
-                                I hate
-                        </p>
-                        <p>
-                                Yogurt
-                        </p>
-                </div>
-                <p>
-                        Jan 1
-                </p>
-        </div>
-</div>,
-      "className": "scrolling-opening",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <div
-            className="fade"
-/>,
-          <h1
-            className="scrolling-opening-title"
->
-            Star Wars!
-</h1>,
-          <div>
-            <div>
-                        <p>
-                                    Yogurt
-                        </p>
-                        <p>
-                                    I hate
-                        </p>
-                        <p>
-                                    Yogurt
-                        </p>
-            </div>
-            <p>
-                        Jan 1
-            </p>
-</div>,
-        ],
-        "className": "crawl",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "fade",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Star Wars!",
-            "className": "scrolling-opening-title",
-          },
-          "ref": null,
-          "rendered": "Star Wars!",
-          "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <div>
-                <p>
-                                Yogurt
-                </p>
-                <p>
-                                I hate
-                </p>
-                <p>
-                                Yogurt
-                </p>
-</div>,
-              <p>
-                Jan 1
-</p>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <p>
-                    Yogurt
-</p>,
-                  <p>
-                    I hate
-</p>,
-                  <p>
-                    Yogurt
-</p>,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Yogurt",
-                  },
-                  "ref": null,
-                  "rendered": "Yogurt",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "I hate",
-                  },
-                  "ref": null,
-                  "rendered": "I hate",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Yogurt",
-                  },
-                  "ref": null,
-                  "rendered": "Yogurt",
-                  "type": "p",
-                },
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Jan 1",
-              },
-              "ref": null,
-              "rendered": "Jan 1",
-              "type": "p",
-            },
-          ],
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
           className="crawl"
 >
-          <div
-                    className="fade"
-          />
           <h1
                     className="scrolling-opening-title"
           >
@@ -250,18 +61,30 @@ ShallowWrapper {
                     </p>
           </div>
 </div>,
-        "className": "scrolling-opening",
+      ],
+      "className": "scrolling-opening",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "X",
+          "className": "close-btn",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "X",
+        "type": "button",
       },
-      "ref": null,
-      "rendered": Object {
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <div
-              className="fade"
-/>,
             <h1
               className="scrolling-opening-title"
 >
@@ -288,17 +111,6 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "fade",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
           Object {
             "instance": null,
             "key": undefined,
@@ -407,6 +219,206 @@ ShallowWrapper {
         ],
         "type": "div",
       },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="close-btn"
+            onClick={[Function]}
+>
+            X
+</button>,
+          <div
+            className="crawl"
+>
+            <h1
+                        className="scrolling-opening-title"
+            >
+                        Star Wars!
+            </h1>
+            <div>
+                        <div>
+                                    <p>
+                                                Yogurt
+                                    </p>
+                                    <p>
+                                                I hate
+                                    </p>
+                                    <p>
+                                                Yogurt
+                                    </p>
+                        </div>
+                        <p>
+                                    Jan 1
+                        </p>
+            </div>
+</div>,
+        ],
+        "className": "scrolling-opening",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "X",
+            "className": "close-btn",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "X",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1
+                className="scrolling-opening-title"
+>
+                Star Wars!
+</h1>,
+              <div>
+                <div>
+                                <p>
+                                                Yogurt
+                                </p>
+                                <p>
+                                                I hate
+                                </p>
+                                <p>
+                                                Yogurt
+                                </p>
+                </div>
+                <p>
+                                Jan 1
+                </p>
+</div>,
+            ],
+            "className": "crawl",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Star Wars!",
+                "className": "scrolling-opening-title",
+              },
+              "ref": null,
+              "rendered": "Star Wars!",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div>
+                    <p>
+                                        Yogurt
+                    </p>
+                    <p>
+                                        I hate
+                    </p>
+                    <p>
+                                        Yogurt
+                    </p>
+</div>,
+                  <p>
+                    Jan 1
+</p>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p>
+                        Yogurt
+</p>,
+                      <p>
+                        I hate
+</p>,
+                      <p>
+                        Yogurt
+</p>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Yogurt",
+                      },
+                      "ref": null,
+                      "rendered": "Yogurt",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "I hate",
+                      },
+                      "ref": null,
+                      "rendered": "I hate",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Yogurt",
+                      },
+                      "ref": null,
+                      "rendered": "Yogurt",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Jan 1",
+                  },
+                  "ref": null,
+                  "rendered": "Jan 1",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
       "type": "div",
     },
   ],

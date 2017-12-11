@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches its snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    Favorites={
+        Array [
+            Object {
+              "Data": Object {
+                "homeworld": "Saturn",
+              },
+              "name": "Jojo",
+            },
+          ]
+    }
+    addToFavorites={[Function]}
+    cardsInfo={
+        Array [
+            Object {
+              "Data": Object {
+                "Homeworld": "earth",
+              },
+              "name": "Julie",
+            },
+            Object {
+              "Data": Object {
+                "Residents": "Goofy",
+              },
+              "name": "Pluto",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          addToFavorites={[Function]}
+          info={
+                    Object {
+                              "Data": Object {
+                                "Homeworld": "earth",
+                              },
+                              "name": "Julie",
+                            }
+          }
+          type="card"
+/>,
+        <Card
+          addToFavorites={[Function]}
+          info={
+                    Object {
+                              "Data": Object {
+                                "Residents": "Goofy",
+                              },
+                              "name": "Pluto",
+                            }
+          }
+          type="card"
+/>,
+      ],
+      "className": "card-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "addToFavorites": [Function],
+          "info": Object {
+            "Data": Object {
+              "Homeworld": "earth",
+            },
+            "name": "Julie",
+          },
+          "type": "card",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "addToFavorites": [Function],
+          "info": Object {
+            "Data": Object {
+              "Residents": "Goofy",
+            },
+            "name": "Pluto",
+          },
+          "type": "card",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            addToFavorites={[Function]}
+            info={
+                        Object {
+                                    "Data": Object {
+                                      "Homeworld": "earth",
+                                    },
+                                    "name": "Julie",
+                                  }
+            }
+            type="card"
+/>,
+          <Card
+            addToFavorites={[Function]}
+            info={
+                        Object {
+                                    "Data": Object {
+                                      "Residents": "Goofy",
+                                    },
+                                    "name": "Pluto",
+                                  }
+            }
+            type="card"
+/>,
+        ],
+        "className": "card-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "addToFavorites": [Function],
+            "info": Object {
+              "Data": Object {
+                "Homeworld": "earth",
+              },
+              "name": "Julie",
+            },
+            "type": "card",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "addToFavorites": [Function],
+            "info": Object {
+              "Data": Object {
+                "Residents": "Goofy",
+              },
+              "name": "Pluto",
+            },
+            "type": "card",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

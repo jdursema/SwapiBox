@@ -1,13 +1,15 @@
 .button{
   font-size: 20px;
-  width: 150px;
-  border-radius: 0;
+  width: 225px;
+  border-radius: 10px;
   border: none;
-  margin: 1%;
+  margin: 2%;
   padding: 1% 0;
+  background-color: #3F3F3F;
+  font-size: 35px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  
 }
-
-
 
 .btn-bar{
   display: flex;
@@ -22,14 +24,74 @@
   align-items: center;
 }
 
-.Planets{
-  background-color: lightblue;
+
+.People:hover{
+  animation: pulse 5s infinite;
+
 }
 
-.Vehicles{
-  background-color: lightgreen;
+@keyframes pulse {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: #76D7F2;
+    color: white;
+  }
+  100%{
+    background-color:  white;
+  }
 }
 
-.Planets{
-  background-color: purple;
+.People:focus{
+  background-color: #76D7F2;
+  color: white;
+}
+
+
+.Vehicles:hover{
+  animation: pulse2 5s infinite;
+
+}
+
+@keyframes pulse2 {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: #27FF62;
+    color: white;
+  }
+  100%{
+    background-color:  white;
+  }
+}
+
+.Vehicles:focus{
+  background-color: #27FF62;
+  color: white;
+}
+
+.Planets:hover{
+  animation: pulse3 5s infinite;
+
+}
+
+@keyframes pulse3 {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: #8000FF;
+    color: white;
+  }
+  100%{
+    background-color:  white;
+  }
+}
+
+.Planets:focus{
+  background-color: #8000FF;
+  color: white;
+ 
 }

@@ -9,13 +9,13 @@ ShallowWrapper {
     cardsInfo={
         Array [
             Object {
-              "data": Object {
+              "Data": Object {
                 "Homeworld": "earth",
               },
               "name": "Julie",
             },
             Object {
-              "data": Object {
+              "Data": Object {
                 "Residents": "Goofy",
               },
               "name": "Pluto",
@@ -62,17 +62,18 @@ ShallowWrapper {
           </button>
 </div>,
         <CardContainer
+          Favorites={undefined}
           addToFavorites={[Function]}
           cardsInfo={
                     Array [
                               Object {
-                                "data": Object {
+                                "Data": Object {
                                   "Homeworld": "earth",
                                 },
                                 "name": "Julie",
                               },
                               Object {
-                                "data": Object {
+                                "Data": Object {
                                   "Residents": "Goofy",
                                 },
                                 "name": "Pluto",
@@ -161,16 +162,17 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "Favorites": undefined,
           "addToFavorites": [Function],
           "cardsInfo": Array [
             Object {
-              "data": Object {
+              "Data": Object {
                 "Homeworld": "earth",
               },
               "name": "Julie",
             },
             Object {
-              "data": Object {
+              "Data": Object {
                 "Residents": "Goofy",
               },
               "name": "Pluto",
@@ -214,17 +216,18 @@ ShallowWrapper {
             </button>
 </div>,
           <CardContainer
+            Favorites={undefined}
             addToFavorites={[Function]}
             cardsInfo={
                         Array [
                                     Object {
-                                      "data": Object {
+                                      "Data": Object {
                                         "Homeworld": "earth",
                                       },
                                       "name": "Julie",
                                     },
                                     Object {
-                                      "data": Object {
+                                      "Data": Object {
                                         "Residents": "Goofy",
                                       },
                                       "name": "Pluto",
@@ -313,16 +316,17 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "Favorites": undefined,
             "addToFavorites": [Function],
             "cardsInfo": Array [
               Object {
-                "data": Object {
+                "Data": Object {
                   "Homeworld": "earth",
                 },
                 "name": "Julie",
               },
               Object {
-                "data": Object {
+                "Data": Object {
                   "Residents": "Goofy",
                 },
                 "name": "Pluto",

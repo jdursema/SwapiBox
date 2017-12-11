@@ -8,13 +8,13 @@ ShallowWrapper {
     Favorites={
         Array [
             Object {
-              "data": Object {
+              "Data": Object {
                 "Homeworld": "earth",
               },
               "name": "Julie",
             },
             Object {
-              "data": Object {
+              "Data": Object {
                 "Residents": "Goofy",
               },
               "name": "Pluto",
@@ -47,8 +47,11 @@ ShallowWrapper {
                     2
           </button>
 </div>,
+        <img
+          src="https://c.tribune.com.pk/2015/03/853137-starwars-1426319002-513-640x480.jpg"
+/>,
         <h1>
-          Return of the SwapiBox
+          Return of the Swapi Box
 </h1>,
       ],
       "className": "header",
@@ -96,10 +99,21 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Return of the SwapiBox",
+          "src": "https://c.tribune.com.pk/2015/03/853137-starwars-1426319002-513-640x480.jpg",
         },
         "ref": null,
-        "rendered": "Return of the SwapiBox",
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Return of the Swapi Box",
+        },
+        "ref": null,
+        "rendered": "Return of the Swapi Box",
         "type": "h1",
       },
     ],
@@ -123,8 +137,11 @@ ShallowWrapper {
                         2
             </button>
 </div>,
+          <img
+            src="https://c.tribune.com.pk/2015/03/853137-starwars-1426319002-513-640x480.jpg"
+/>,
           <h1>
-            Return of the SwapiBox
+            Return of the Swapi Box
 </h1>,
         ],
         "className": "header",
@@ -172,10 +189,21 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Return of the SwapiBox",
+            "src": "https://c.tribune.com.pk/2015/03/853137-starwars-1426319002-513-640x480.jpg",
           },
           "ref": null,
-          "rendered": "Return of the SwapiBox",
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Return of the Swapi Box",
+          },
+          "ref": null,
+          "rendered": "Return of the Swapi Box",
           "type": "h1",
         },
       ],

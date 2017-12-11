@@ -4,9 +4,21 @@ import './CardContainer.css';
 import PropTypes from 'prop-types';
 
 
-const CardContainer = ( { cardsInfo, addToFavorites } ) => {
+const CardContainer = ( { cardsInfo, addToFavorites, Favorites } ) => {
   const mappedCards = cardsInfo.map((card, index)=>{
-    return <Card key={index} info={card} addToFavorites={addToFavorites}/>;
+    if (Favorites.includes(card)){
+      return <Card 
+        key={index} 
+        info={card} 
+        addToFavorites={addToFavorites} 
+        type='card favorited'/>;
+    } else {
+      return <Card 
+        key={index} 
+        info={card} 
+        addToFavorites={addToFavorites} 
+        type='card'/>;      
+    }
   });
 
   return (
@@ -20,6 +32,7 @@ const CardContainer = ( { cardsInfo, addToFavorites } ) => {
 export default CardContainer;
 
 CardContainer.propTypes = {
+  Favorites: PropTypes.array,
   cardsInfo: PropTypes.array,
   addToFavorites: PropTypes.func
 };
