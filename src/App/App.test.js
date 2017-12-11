@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactDOM, { render } from 'react-dom';
 import App from './App';
-import { shallow, mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
+import { shallow } from 'enzyme';
 
 describe('App', () => {   
   it('should be defined', () => {
@@ -38,7 +36,7 @@ describe('App', () => {
 
   it('should display the favorite cards when display favorites is called', () => {
     const renderedApp = shallow(<App />, {disableLifecycleMethods: true});
-    const mockObj = {name: 'Julie', Data: {Homeworld: 'Earth'}}
+    const mockObj = {name: 'Julie', Data: {Homeworld: 'Earth'}};
     renderedApp.setState({Favorites: [mockObj]});
 
     renderedApp.instance().displayFavorites(mockObj);

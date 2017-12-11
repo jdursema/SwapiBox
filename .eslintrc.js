@@ -30,7 +30,6 @@ module.exports = {
     "computed-property-spacing": ["error", "never"],
     "func-call-spacing": ["error", "never"],
     "keyword-spacing": ["error", { "before": true, "after": true }],
-    "max-len": ["warn", 80],
     "no-duplicate-imports": "error",
     "id-length": "error",
     "id-blacklist": ["error", "data", "err", "e", "cb", "callback", "payload", "obj", "arr"],

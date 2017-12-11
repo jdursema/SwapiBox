@@ -8,7 +8,7 @@ it('should render without crashing', () => {
   const currentType = 'card';
   const CardWrapper = shallow(<Card addToFavorites={mockFunc} info={cardData} type={currentType}/>);
 
-  expect(CardWrapper).toBeDefined()
+  expect(CardWrapper).toBeDefined();
 });
 
 it('should match its snap shot', () => {
