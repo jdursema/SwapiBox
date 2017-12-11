@@ -1,5 +1,5 @@
 export const fetchVehicleInfo = async() => {
-  try{
+  try {
     const fetchVehicles = await fetch(`https://swapi.co/api/vehicles/`);
     const vehicleData = await fetchVehicles.json();
     const vehicleObjArray = await createVehicleObj(vehicleData.results);

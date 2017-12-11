@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import CardContainer from './CardContainer';
 
 it('renders without crashing', () => {
-  const mockfunc = jest.fn()
+  const mockfunc = jest.fn();
   const cardData = 
     [{name: 'Julie', Data:{Homeworld: 'earth'}}, 
       {name: 'Pluto', Data:{Residents: 'Goofy'}}];
@@ -15,7 +15,7 @@ it('renders without crashing', () => {
 });
 
 it('matches its snapshot', () => {
-  const mockfunc = jest.fn()
+  const mockfunc = jest.fn();
   const cardData = 
     [{name: 'Julie', Data:{Homeworld: 'earth'}}, 
       {name: 'Pluto', Data:{Residents: 'Goofy'}}];

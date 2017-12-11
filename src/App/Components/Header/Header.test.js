@@ -16,8 +16,8 @@ it('should match snap shot', () => {
   const mockFunc = jest.fn();
   const favorites =
     [{name: 'Julie', Data:{Homeworld: 'earth'}}, 
-      {name: 'Pluto', Data:{Residents: 'Goofy'}}]
-  const header = shallow(<Header Favorites={favorites} displayFavorites={mockFunc}/>)
+      {name: 'Pluto', Data:{Residents: 'Goofy'}}];
+  const header = shallow(<Header Favorites={favorites} displayFavorites={mockFunc}/>);
 
   expect(header).toMatchSnapshot();
 });
