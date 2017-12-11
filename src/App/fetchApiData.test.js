@@ -26,6 +26,29 @@ it('People fetch is called with the correct params', () => {
 
     expect(window.fetch).toBeCalledWith(...expected);
   });
+
+  it('People fetch should return the correct object', () => {
+    const expectedResponse = 
+    [{"Data": {
+      "Homeworld": undefined,
+      "Population": undefined,
+      "Species": undefined}, 
+    "name": "Luke Skywalker", 
+    "type": "people-card"}]
+
+    expect(fetchCharacterInfo()).resolves.toEqual(expectedResponse);
+  })
+
+  it('People fetch should throw an error if it hits the catch', async () => {
+    window.fetch = 
+      jest.fn().mockImplementation(() => Promise.reject({
+        status: 500
+      }));
+    const expectedError = Error('oh no');
+    const getPeopleData = await fetchCharacterInfo();
+
+    expect(getPeopleData).toEqual(expectedError);
+  });
 });
 
 describe('fetch function tests', () =>{
@@ -48,6 +71,31 @@ it('Vehicle fetch is called with the correct params', () => {
 
     expect(window.fetch).toBeCalledWith(...expected);
   });
+
+  it('Vehicle fetch should return the correct object', () => {
+    const expectedResponse = 
+    [{"Data": 
+      {"Capacity": "30", 
+      "Class": "wheeled", 
+      "Model": "Digger Crawler"}, 
+    "name": "Sand Crawler", 
+    "type": "vehicle-card"}]
+
+    expect(fetchVehicleInfo()).resolves.toEqual(expectedResponse);
+  })
+
+  it('Vehicle fetch should throw an error if it hits the catch', async () => {
+    window.fetch = 
+      jest.fn().mockImplementation(() => Promise.reject({
+        status: 500
+      }));
+    const expectedError = Error('oh no');
+    const getVehicleData = await fetchVehicleInfo();
+
+    expect(getVehicleData).toEqual(expectedError);
+  });
+
+  
 });
 
 describe('fetch function tests', () => {
@@ -70,4 +118,28 @@ it('Planet fetch is called with the correct params', () => {
 
     expect(window.fetch).toBeCalledWith(...expected);
   });
+
+  it('Vehicle fetch should return the correct object', () => {
+    const expectedResponse = 
+    [{"Data": {
+      "Capacity": undefined, 
+      "Class": undefined, 
+      "Model": undefined}, 
+    "name": "Alderaan", 
+    "type": "vehicle-card"}]
+
+    expect(fetchVehicleInfo()).resolves.toEqual(expectedResponse);
+  })
+
+  it('Vehicle fetch should throw an error if it hits the catch', async () => {
+    window.fetch = 
+      jest.fn().mockImplementation(() => Promise.reject({
+        status: 500
+      }));
+    const expectedError = Error('oh no');
+    const getPlanetData = await fetchPlanetInfo();
+
+    expect(getPlanetData).toEqual(expectedError);
+  });
+
 });

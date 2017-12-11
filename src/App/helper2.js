@@ -1,9 +1,13 @@
 export const fetchVehicleInfo = async() => {
-  const fetchVehicles = await fetch(`https://swapi.co/api/vehicles/`);
-  const vehicleData = await fetchVehicles.json();
-  const vehicleObjArray = await createVehicleObj(vehicleData.results);
-
-  return vehicleObjArray;
+  try{
+    const fetchVehicles = await fetch(`https://swapi.co/api/vehicles/`);
+    const vehicleData = await fetchVehicles.json();
+    const vehicleObjArray = await createVehicleObj(vehicleData.results);
+    return vehicleObjArray;
+  } catch (ex) {
+    const error = new Error('oh no');
+    return error; 
+  } 
 };
 
 const createVehicleObj = (vehicleArray) => {
