@@ -55,7 +55,7 @@ class App extends Component {
     this.setState({Cards: this.state.Planets});   
   }
 
-  addToFavorites = (infoObj) => {
+  addToFavorites = ( infoObj ) => {
     let checkForDup = this.state.Favorites.filter((Obj)=>{
       return Obj.name === infoObj.name;
     });
@@ -68,20 +68,21 @@ class App extends Component {
         return Obj.name !== infoObj.name;
       });
       this.setState({Favorites: removedItemArray});
-    }
-   
+    } 
   }
 
   displayFavorites = () =>{
     this.setState({Cards: this.state.Favorites});
   }
+
+
       
   render() {
     return (
       <div className="App">
-        {/* <ScrollingOpening 
+        <ScrollingOpening 
           OpeningCrawl={this.state.OpeningCrawl}
-        /> */}
+        />
         <Header 
           Favorites={this.state.Favorites} 
           displayFavorites={this.displayFavorites}

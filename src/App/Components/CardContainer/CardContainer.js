@@ -5,12 +5,19 @@ import PropTypes from 'prop-types';
 
 
 const CardContainer = ( { cardsInfo, addToFavorites, Favorites } ) => {
-  console.log(cardsInfo)
   const mappedCards = cardsInfo.map((card, index)=>{
-    if(Favorites.includes(card)){
-      return <Card key={index} info={card} addToFavorites={addToFavorites} type=' card favorited'/>
+    if (Favorites.includes(card)){
+      return <Card 
+        key={index} 
+        info={card} 
+        addToFavorites={addToFavorites} 
+        type='card favorited'/>;
     } else {
-      return <Card key={index} info={card} addToFavorites={addToFavorites} type='card'/>;      
+      return <Card 
+        key={index} 
+        info={card} 
+        addToFavorites={addToFavorites} 
+        type='card'/>;      
     }
   });
 
@@ -25,6 +32,7 @@ const CardContainer = ( { cardsInfo, addToFavorites, Favorites } ) => {
 export default CardContainer;
 
 CardContainer.propTypes = {
+  Favorites: PropTypes.array,
   cardsInfo: PropTypes.array,
   addToFavorites: PropTypes.func
 };

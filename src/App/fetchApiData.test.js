@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import { fetchCharacterInfo } from './helper';
 import { fetchVehicleInfo } from './helper2';
 import { fetchPlanetInfo } from './helper3'

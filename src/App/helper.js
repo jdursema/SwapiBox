@@ -1,22 +1,26 @@
 export const fetchCharacterInfo = async() => {
-  try{
+  try {
     const fetchPeople = await fetch(`https://swapi.co/api/people/`);
     const peopleData = await fetchPeople.json();
-      const unresolvedPromises = peopleData.results.map(async (character) => {
-        let homeworldFetch = await fetch(character.homeworld);
-        let homeworldData = await homeworldFetch.json();
-        let speciesFetch = await fetch(character.species);
-        let speciesData = await speciesFetch.json();
-        return {name: character.name, type:'people-card', data: { Homeworld: homeworldData.name, Population: homeworldData.population, Species: speciesData.name}};
-      });
-    const people = await Promise.all(unresolvedPromises)
+    const unresolvedPromises = peopleData.results.map(async (character) => {
+      let homeworldFetch = await fetch(character.homeworld);
+      let homeworldData = await homeworldFetch.json();
+      let speciesFetch = await fetch(character.species);
+      let speciesData = await speciesFetch.json();
+      return {
+        name: character.name, 
+        type:'people-card', 
+        Data: { 
+          Homeworld: homeworldData.name, 
+          Population: homeworldData.population, 
+          Species: speciesData.name}};
+    });
+    const people = await Promise.all(unresolvedPromises);
 
     return people;
-    }
-    
-    catch (ex) {
-      const error = new Error('oh no')
-      return error 
+  } catch (ex) {
+    const error = new Error('oh no');
+    return error; 
   }
 };
 

@@ -62,6 +62,7 @@ ShallowWrapper {
           </button>
 </div>,
         <CardContainer
+          Favorites={undefined}
           addToFavorites={[Function]}
           cardsInfo={
                     Array [
@@ -161,6 +162,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "Favorites": undefined,
           "addToFavorites": [Function],
           "cardsInfo": Array [
             Object {
@@ -214,6 +216,7 @@ ShallowWrapper {
             </button>
 </div>,
           <CardContainer
+            Favorites={undefined}
             addToFavorites={[Function]}
             cardsInfo={
                         Array [
@@ -313,6 +316,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "Favorites": undefined,
             "addToFavorites": [Function],
             "cardsInfo": Array [
               Object {
