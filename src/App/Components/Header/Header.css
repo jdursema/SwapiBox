@@ -16,9 +16,10 @@ img{
 }
 
 .favorite-btn{
-  background-color: skyblue;
-  font-size: 20px;
-  width: 150px;
+  background-color: #76D7F2;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 30px;
+  width: 175px;
   border-radius: 0;
   border: none;
   margin: 1%;
