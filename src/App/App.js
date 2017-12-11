@@ -6,12 +6,13 @@ import MainSection from './Components/MainSection/MainSection';
 import { fetchCharacterInfo } from './helper';
 import { fetchVehicleInfo } from './helper2';
 import { fetchPlanetInfo } from './helper3';
+import { fetchscrollingOpening } from './helper4';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      OpeningCrawl: [],
+      OpeningCrawl: {},
       Favorites: [],
       Cards: [],
       People: [],
@@ -24,18 +25,11 @@ class App extends Component {
     this.getData();
   }
 
-  getData() {
+  getData = async() => {
     const randomNumber = Math.floor(Math.random()*(7-1))+1;
-    fetch(`https://swapi.co/api/films/${randomNumber}/`)
-      .then(res => res.json())
-      .then(data => {
-        const lineBreak = new RegExp(/\s{3,}/, 'g');
-        const convertLineBreaks= data.opening_crawl.replace(lineBreak, '###');
-        const splitCovertedBreaks = convertLineBreaks.split('###');
-        this.setState({OpeningCrawl: {body: splitCovertedBreaks, title: data.title}
-        });
-      });
-  }
+    const movieObj= await fetchscrollingOpening(randomNumber);
+    this.setState({OpeningCrawl: movieObj});
+  };
 
   fetchCharacterCardInfo = async () => {
     if (this.state.People.length === 0) {

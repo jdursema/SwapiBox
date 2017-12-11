@@ -25,5 +25,5 @@ const OpeningScrolling = ({ OpeningCrawl }) => {
 export default OpeningScrolling;
 
 OpeningScrolling.propTypes = {
-  OpeningCrawl: PropTypes.array
+  OpeningCrawl: PropTypes.object
 };
