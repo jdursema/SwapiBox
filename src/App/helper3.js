@@ -10,7 +10,7 @@ export const fetchPlanetInfo = async() => {
 const createPlanetObj = (planetArray) => {
   const unresolvedPromises = planetArray.map( async (planet) => {
     const fetchedResidents = await fetchResidents(planet.residents);
-    return {name: planet.name, data: {terrain: planet.terrain, population: planet.population, climate: planet.climate, residents: fetchedResidents.join(',\n')}};
+    return {name: planet.name, type: 'planet-card', data: {Terrain: planet.terrain, Population: planet.population, Climate: planet.climate, Residents: fetchedResidents.join(',\n')}};
   });
   return Promise.all(unresolvedPromises);
 };

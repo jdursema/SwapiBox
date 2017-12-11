@@ -91,7 +91,8 @@ class App extends Component {
           fetchVehicleCardInfo={this.fetchVehicleCardInfo} 
           fetchPlanetCardInfo={this.fetchPlanetCardInfo} 
           cardsInfo={this.state.Cards} 
-          addToFavorites={this.addToFavorites}  
+          addToFavorites={this.addToFavorites} 
+          Favorites={this.state.Favorites}  
         />
       </div>
     );

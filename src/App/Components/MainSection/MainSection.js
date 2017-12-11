@@ -3,7 +3,7 @@ import './MainSection.css';
 import CardContainer from '../CardContainer/CardContainer';
 import PropTypes from 'prop-types';
 
-const MainSection = ({fetchCharacterCardInfo, fetchVehicleCardInfo, fetchPlanetCardInfo, cardsInfo, addToFavorites}) => {
+const MainSection = ({fetchCharacterCardInfo, fetchVehicleCardInfo, fetchPlanetCardInfo, cardsInfo, addToFavorites, Favorites}) => {
   return (
     <div className='main-section'>
       <div className='btn-bar'>
@@ -22,7 +22,8 @@ const MainSection = ({fetchCharacterCardInfo, fetchVehicleCardInfo, fetchPlanetC
       </div>
       <CardContainer 
         cardsInfo={cardsInfo} 
-        addToFavorites={addToFavorites} />
+        addToFavorites={addToFavorites}
+        Favorites={Favorites} />
     </div>
   );
 };

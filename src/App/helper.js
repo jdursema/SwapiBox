@@ -7,7 +7,7 @@ export const fetchCharacterInfo = async() => {
         let homeworldData = await homeworldFetch.json();
         let speciesFetch = await fetch(character.species);
         let speciesData = await speciesFetch.json();
-        return {name: character.name, data: { homeworld: homeworldData.name, population: homeworldData.population, species: speciesData.name}};
+        return {name: character.name, type:'people-card', data: { Homeworld: homeworldData.name, Population: homeworldData.population, Species: speciesData.name}};
       });
     const people = await Promise.all(unresolvedPromises)
 
