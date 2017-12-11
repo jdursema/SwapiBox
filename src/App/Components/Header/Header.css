@@ -1,8 +1,18 @@
 h1{
-  color: yellow;
-  font-size: 50px;
-  margin: 0;
+  color: #FFE400;
+  font-size: 100px;
   font-family: 'Pathway Gothic One', sans-serif;
+  margin: 0;
+  margin-bottom: 5%;
+  line-height: 10px;
+}
+
+img{
+  width: 10%;
+  display: flex;
+  justify-content: right;
+  margin-bottom: 0;
+  margin-left: 32%;
 }
 
 .favorite-btn{
@@ -11,7 +21,7 @@ h1{
   width: 150px;
   border-radius: 0;
   border: none;
-  margin: 1% 0;
+  margin: 1%;
   padding: 1% 0;
 }
 
