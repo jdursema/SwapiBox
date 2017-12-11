@@ -15,9 +15,10 @@ const OpeningScrolling = ({ OpeningCrawl }) => {
             <p>{OpeningCrawl.body[1]}</p>
             <p>{OpeningCrawl.body[2]}</p>
           </div>}
-
+          <p>{OpeningCrawl.releaseDate}</p>
         </div>
       </div>
+      
     </div>
   );
 };

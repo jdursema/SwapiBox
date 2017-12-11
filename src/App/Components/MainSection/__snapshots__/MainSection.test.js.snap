@@ -1,0 +1,348 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MainSection
+    addToFavorites={[Function]}
+    cardsInfo={
+        Array [
+            Object {
+              "data": Object {
+                "Homeworld": "earth",
+              },
+              "name": "Julie",
+            },
+            Object {
+              "data": Object {
+                "Residents": "Goofy",
+              },
+              "name": "Pluto",
+            },
+          ]
+    }
+    fetchCharacterCardInfo={[Function]}
+    fetchPlanetCardInfo={[Function]}
+    fetchVehicleCardInfo={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="btn-bar"
+>
+          <button
+                    className="People button"
+                    onClick={[Function]}
+          >
+                    People
+          </button>
+          <button
+                    className="Vehicles button"
+                    onClick={[Function]}
+          >
+                    Vehicles
+          </button>
+          <button
+                    className="Planets button"
+                    onClick={[Function]}
+          >
+                    Planets
+          </button>
+</div>,
+        <CardContainer
+          addToFavorites={[Function]}
+          cardsInfo={
+                    Array [
+                              Object {
+                                "data": Object {
+                                  "Homeworld": "earth",
+                                },
+                                "name": "Julie",
+                              },
+                              Object {
+                                "data": Object {
+                                  "Residents": "Goofy",
+                                },
+                                "name": "Pluto",
+                              },
+                            ]
+          }
+/>,
+      ],
+      "className": "main-section",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              className="People button"
+              onClick={[Function]}
+>
+              People
+</button>,
+            <button
+              className="Vehicles button"
+              onClick={[Function]}
+>
+              Vehicles
+</button>,
+            <button
+              className="Planets button"
+              onClick={[Function]}
+>
+              Planets
+</button>,
+          ],
+          "className": "btn-bar",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "People",
+              "className": "People button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "People",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Vehicles",
+              "className": "Vehicles button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Vehicles",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Planets",
+              "className": "Planets button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Planets",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addToFavorites": [Function],
+          "cardsInfo": Array [
+            Object {
+              "data": Object {
+                "Homeworld": "earth",
+              },
+              "name": "Julie",
+            },
+            Object {
+              "data": Object {
+                "Residents": "Goofy",
+              },
+              "name": "Pluto",
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="btn-bar"
+>
+            <button
+                        className="People button"
+                        onClick={[Function]}
+            >
+                        People
+            </button>
+            <button
+                        className="Vehicles button"
+                        onClick={[Function]}
+            >
+                        Vehicles
+            </button>
+            <button
+                        className="Planets button"
+                        onClick={[Function]}
+            >
+                        Planets
+            </button>
+</div>,
+          <CardContainer
+            addToFavorites={[Function]}
+            cardsInfo={
+                        Array [
+                                    Object {
+                                      "data": Object {
+                                        "Homeworld": "earth",
+                                      },
+                                      "name": "Julie",
+                                    },
+                                    Object {
+                                      "data": Object {
+                                        "Residents": "Goofy",
+                                      },
+                                      "name": "Pluto",
+                                    },
+                                  ]
+            }
+/>,
+        ],
+        "className": "main-section",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                className="People button"
+                onClick={[Function]}
+>
+                People
+</button>,
+              <button
+                className="Vehicles button"
+                onClick={[Function]}
+>
+                Vehicles
+</button>,
+              <button
+                className="Planets button"
+                onClick={[Function]}
+>
+                Planets
+</button>,
+            ],
+            "className": "btn-bar",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "People",
+                "className": "People button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "People",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Vehicles",
+                "className": "Vehicles button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Vehicles",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Planets",
+                "className": "Planets button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Planets",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addToFavorites": [Function],
+            "cardsInfo": Array [
+              Object {
+                "data": Object {
+                  "Homeworld": "earth",
+                },
+                "name": "Julie",
+              },
+              Object {
+                "data": Object {
+                  "Residents": "Goofy",
+                },
+                "name": "Pluto",
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
