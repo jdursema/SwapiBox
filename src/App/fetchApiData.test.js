@@ -1,9 +1,10 @@
 /*eslint-disable*/
 import { fetchCharacterInfo } from './helper';
 import { fetchVehicleInfo } from './helper2';
-import { fetchPlanetInfo } from './helper3'
+import { fetchPlanetInfo } from './helper3';
+import { fetchscrollingOpening } from './helper4';
 import mockApiResponse from './mockApiResponse';
-const { mockPlanetApiResponse, mockVehicleApiResponse, mockPeopleApiResponse } = mockApiResponse;
+const { mockPlanetApiResponse, mockVehicleApiResponse, mockPeopleApiResponse, mockOpeningApiResponse } = mockApiResponse;
 
 describe('fetch function tests', () =>{
   beforeEach(() => {
@@ -17,7 +18,7 @@ describe('fetch function tests', () =>{
   }))  
 });
 
-it('fetch is called with the correct params', () => {
+it('People fetch is called with the correct params', () => {
   const expected =[
       'https://swapi.co/api/people/'
     ];

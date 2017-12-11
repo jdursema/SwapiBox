@@ -27,22 +27,3 @@ it('should match the snapshot', () => {
 
   expect(mainSectionWrapper).toMatchSnapshot();
 });
-
-it('should receive props', () => {
-  const mockFunc = jest.fn();
-  const mockFunc2 = jest.fn();
-  const mockFunc3 = jest.fn();
-  const mockFunc4 = jest.fn();
-  const cardData = 
-    [{name: 'Julie', Data:{Homeworld: 'earth'}}, 
-      {name: 'Pluto', Data:{Residents: 'Goofy'}}];
-
-  const mainSectionWrapper = shallow(<MainSection 
-    fetchCharacterCardInfo={mockFunc} 
-    fetchVehicleCardInfo={mockFunc2} 
-    fetchPlanetCardInfo={mockFunc3} 
-    cardsInfo={cardData} 
-    addToFavorites={mockFunc4} />);
-
-  expect(mainSectionWrapper.props.fetchCharacterCardInfo).toEqual(mockFunc);
-});
