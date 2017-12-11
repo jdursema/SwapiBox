@@ -1,9 +1,13 @@
 export const fetchPlanetInfo = async() => {
-  const fetchPlanets = await fetch(`https://swapi.co/api/planets/`);
-  const planetsData = await fetchPlanets.json();
-  const planetObjArray = await createPlanetObj(planetsData.results);
-
-  return planetObjArray;
+  try {
+    const fetchPlanets = await fetch(`https://swapi.co/api/planets/`);
+    const planetsData = await fetchPlanets.json();
+    const planetObjArray = await createPlanetObj(planetsData.results);
+    return planetObjArray;
+  } catch (ex) {
+    const error = new Error('oh no');
+    return error; 
+  }
 };
 
 
