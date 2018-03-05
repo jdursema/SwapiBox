@@ -1,6 +1,6 @@
 [Check Out the Live Site](https://jdursema.github.io/SwapiBox/)
 
-![Logo](./Screen Shot 2018-03-05 at 1.35.30 PM.png)
+![Logo](./SwapiLogo.png)
 
 Swapi Box displays the characters, vehicles, and planets from the Star Wars franchaise. Users can click on different cards to favorite them and view their favorites later.
 
