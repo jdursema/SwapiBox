@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import ScrollingOpening from './Components/ScrollingOpening/ScrollingOpening';
-import Header from './Components/Header/Header';
-import MainSection from './Components/MainSection/MainSection';
-import { fetchCharacterInfo } from './helper';
-import { fetchVehicleInfo } from './helper2';
-import { fetchPlanetInfo } from './helper3';
-import { fetchscrollingOpening } from './helper4';
+import ScrollingOpening from '../ScrollingOpening/ScrollingOpening';
+import Header from '../Header/Header';
+import MainSection from '../MainSection/MainSection';
+import { fetchCharacterInfo } from '../helpers/helper';
+import { fetchVehicleInfo } from '../helpers/helper2';
+import { fetchPlanetInfo } from '../helpers/helper3';
+import { fetchscrollingOpening } from '../helpers/helper4';
 
 class App extends Component {
   constructor() {
