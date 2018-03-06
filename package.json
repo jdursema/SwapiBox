@@ -6,7 +6,7 @@
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.0.5",
     "eslint": "^4.12.1",
-    "eslint-plugins-jsx-ally": "^6.0.2",
+    "gh-pages": "^1.1.0",
     "react-test-renderer": "^16.2.0"
   },
   "dependencies": {
@@ -17,7 +17,7 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17"
   },
-  "homepage": "http://jdursema.github.io/swapibox",
+  "homepage": "http://jdursema.github.io/SwapiBox",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
