@@ -1,8 +1,11 @@
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: #F4F4F4;
   font-family: sans-serif;
   background-image: url('./bb8.png');
+  background-size: 70%;
+  background-position: left bottom;
   background-repeat: no-repeat;
-  background-size: cover;
 }
