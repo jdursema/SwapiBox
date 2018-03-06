@@ -18,8 +18,8 @@ const MainSection = ({ fetchCharacterCardInfo, fetchVehicleCardInfo, fetchPlanet
         <button
           className='Planets button' 
           onClick={() => { fetchPlanetCardInfo(); } }>Planets</button>
-
       </div>
+
       <CardContainer 
         cardsInfo={cardsInfo} 
         addToFavorites={addToFavorites}
