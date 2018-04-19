@@ -1,48 +1,58 @@
-.card{
-  width: 250px;
+.card {
+  width: 200px;
+  height: 250px;
   margin: 3%;
-}
-.card p{
-  font-size: 18px;
-}
+  background-color: #FEFEFE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px; }
 
-.people-card{
-  border: solid #76D7F2 3px;
-}
+.card p {
+  font-size: 16px;
+  color: #979797; }
 
-.people-card .top-section{
-  background-color: #76D7F2
-}
-
-.vehicle-card{
-  border: solid 3px #27FF62;
-}
-
-.vehicle-card .top-section{
-  background-color: #27FF62;
-}
-
-.planet-card{
-  border: solid 3px #8000FF;
-}
-
-.planet-card .top-section{
-  background-color: #8000FF;
-}
-
-.fav-btn{
-  margin-left: 80px;
-  width: 150%;
+.fav-btn {
   padding: 1%;
-}
+  border: none; }
 
-.favorited{
-  border:  #FFE400 solid 3px;
-}
+.favorited {
+  border: #FFE400 solid 3px; }
 
-.name{
+.name {
   margin: 0;
   font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 35px;  
-}
+  font-size: 30px;
+  color: #979797; }
 
+.fav-btn {
+  padding: 3% 25%;
+  color: #FEFEFE;
+  position: relative;
+  top: 30px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 24px; }
+
+.icon {
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+  background-position: center; }
+
+.people-card .fav-btn {
+  background-color: #76D7F2; }
+
+.people-card .icon {
+  background-image: url("./person.svg"); }
+
+.planet-card .fav-btn {
+  background-color: #AF2BBF; }
+
+.planet-card .icon {
+  background-image: url("./planet.svg"); }
+
+.vehicle-card .fav-btn {
+  background-color: #27FF62; }
+
+.vehicle-card .icon {
+  background-image: url("./vehicle.svg"); }
