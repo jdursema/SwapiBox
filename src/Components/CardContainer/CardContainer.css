@@ -1,8 +1,10 @@
 .card-container{
-  background: black;
-  width: 68%;
+  background: #D5d5d5;
+  height: 525px;
+  width: 70%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  overflow-y: scroll;
 }
 

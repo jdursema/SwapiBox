@@ -1,48 +1,79 @@
-.card{
+.card {
   width: 250px;
-  margin: 3%;
-}
-.card p{
-  font-size: 18px;
-}
+  height: 325px;
+  margin: 2%;
+  background-color: #FEFEFE;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  box-shadow: #979797 5px 5px 5px; }
 
-.people-card{
-  border: solid #76D7F2 3px;
-}
+.card p {
+  font-size: 16px;
+  color: #979797;
+  max-height: 30px;
+  text-overflow: ellipsis; }
 
-.people-card .top-section{
-  background-color: #76D7F2
-}
+.fav-btn {
+  border: none;
+  position: absolute;
+  bottom: 100px;
+  box-shadow: #979797 0px 5px 5px; }
 
-.vehicle-card{
-  border: solid 3px #27FF62;
-}
-
-.vehicle-card .top-section{
-  background-color: #27FF62;
-}
-
-.planet-card{
-  border: solid 3px #8000FF;
-}
-
-.planet-card .top-section{
-  background-color: #8000FF;
-}
-
-.fav-btn{
-  margin-left: 80px;
-  width: 150%;
-  padding: 1%;
-}
-
-.favorited{
-  border:  #FFE400 solid 3px;
-}
-
-.name{
+.name {
   margin: 0;
   font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 35px;  
-}
+  font-size: 30px;
+  color: #979797; }
 
+.fav-btn {
+  padding: 3% 25%;
+  color: #FEFEFE;
+  position: relative;
+  top: 25px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 24px; }
+
+.icon {
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  background-position: center; }
+
+.people-card .fav-btn {
+  background-color: #76D7F2; }
+
+.people-card .icon {
+  background-image: url("./person.svg"); }
+
+.people-card.favorited .icon {
+  background-image: url("./favorite-person.svg"); }
+
+.people-card.favorited .fav-btn {
+  background-color: #FFE400; }
+
+.planet-card .fav-btn {
+  background-color: #8000FF; }
+
+.planet-card .icon {
+  background-image: url("./planet.svg"); }
+
+.planet-card.favorited .icon {
+  background-image: url("./favorite-planet.svg"); }
+
+.planet-card.favorited .fav-btn {
+  background-color: #FFE400; }
+
+.vehicle-card .fav-btn {
+  background-color: #27FF62; }
+
+.vehicle-card .icon {
+  background-image: url("./vehicle.svg"); }
+
+.vehicle-card.favorited .icon {
+  background-image: url("./favorite-vehicle.svg"); }
+
+.vehicle-card.favorited .fav-btn {
+  background-color: #FFE400; }

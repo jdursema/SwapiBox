@@ -80,9 +80,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ScrollingOpening 
+        {/* <ScrollingOpening 
           OpeningCrawl={this.state.OpeningCrawl}
-        />
+        /> */}
         <Header 
           Favorites={this.state.Favorites} 
           displayFavorites={this.displayFavorites}

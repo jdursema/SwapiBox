@@ -1,0 +1,108 @@
+
+.card{
+  width: 250px;
+  height: 325px;
+  margin: 2%;
+  background-color: #FEFEFE;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  box-shadow: #979797 5px 5px 5px;
+}
+.card p{
+  font-size: 16px;
+  color: #979797;
+  max-height: 30px;
+  text-overflow: ellipsis;
+}
+
+
+.fav-btn{
+  // padding: 1%;
+  border: none;
+  position: absolute;
+  bottom: 100px;
+  box-shadow: #979797 0px 5px 5px;
+}
+
+.name{
+  margin: 0;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 30px;  
+  color: #979797;
+}
+.fav-btn{
+  padding: 3% 25%;
+  color: #FEFEFE;
+  position: relative;
+  top: 25px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 24px;
+}
+
+.icon{
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  background-position: center;
+}
+
+.people-card{
+  .fav-btn{
+    background-color: #76D7F2;
+  }
+  .icon{
+    background-image: url('./person.svg');
+  }
+}
+
+.people-card.favorited{
+    .icon{
+      background-image: url('./favorite-person.svg');
+    }
+    .fav-btn{
+      background-color: #FFE400;
+    }
+}
+
+.planet-card{
+  .fav-btn{
+    background-color: #8000FF;
+  }
+  .icon{
+    background-image: url('./planet.svg');
+  }
+}
+
+.planet-card.favorited{
+  .icon{
+    background-image: url('./favorite-planet.svg');
+  }
+  .fav-btn{
+    background-color: #FFE400;
+  }
+}
+
+.vehicle-card{
+  .fav-btn{
+    background-color: #27FF62;
+  }
+  .icon{
+    background-image: url('./vehicle.svg');
+  }
+}
+
+.vehicle-card.favorited{
+  .icon{
+    background-image: url('./favorite-vehicle.svg');
+  }
+  .fav-btn{
+    background-color: #FFE400;
+  }
+}
+
+
+
+

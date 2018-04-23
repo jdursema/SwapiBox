@@ -24,12 +24,8 @@
 }
 
 @keyframes crawl {
-  0% {
-    top: 800px;
-    }
-  100% { 
-    top: -6000px;
-  }
+	0% { top: 100%; }
+	100% { top: -170%; }
 }
 
 .fade {
@@ -48,12 +44,14 @@
 .scrolling-opening-title{
   color: white;
   font-size: 75px;
+  font-family: 'News Gothic Std', sans-serif;
 }
 
 p{
   color: white;
   font-size: 30px;
   margin: 5%;
+  font-family: 'News Gothic Std', sans-serif;
 }
 
 .hide-screen{
