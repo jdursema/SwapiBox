@@ -4,14 +4,22 @@
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 30px;
   width: 175px;
+  height: 65px;
   border-radius: 0;
   border: none;
   margin: 1%;
   padding: 1% 0;
 }
 
-.btn-container{
+.header{
   display: flex;
-  justify-content: flex-end;
-  margin: 0;
+  justify-content: space-between;
+  margin: 0 4%;
+  align-content: center;
+  /* align-items: center; */
+}
+
+.title{
+  font-size: 75px;
+  font-family: 'Orbitron', sans-serif;  color: #3F3F3F;
 }
