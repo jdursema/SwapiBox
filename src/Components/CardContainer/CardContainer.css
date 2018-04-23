@@ -1,7 +1,7 @@
 .card-container{
   background: #D5d5d5;
   height: 525px;
-  width: 60%;
+  width: 70%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
