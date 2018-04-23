@@ -1,27 +1,30 @@
 
 .card{
-  width: 200px;
-  height: 250px;
-  margin: 3%;
+  width: 250px;
+  height: 325px;
+  margin: 2%;
   background-color: #FEFEFE;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   padding: 5px;
+  box-shadow: #979797 5px 5px 5px;
 }
 .card p{
   font-size: 16px;
   color: #979797;
+  max-height: 30px;
+  text-overflow: ellipsis;
 }
 
 
 .fav-btn{
-  padding: 1%;
+  // padding: 1%;
   border: none;
-}
-
-.favorited{
-  border:  #FFE400 solid 3px;
+  position: absolute;
+  bottom: 100px;
+  box-shadow: #979797 0px 5px 5px;
 }
 
 .name{
@@ -34,14 +37,14 @@
   padding: 3% 25%;
   color: #FEFEFE;
   position: relative;
-  top: 30px;
+  top: 25px;
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 24px;
 }
 
 .icon{
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   background-size: cover;
   background-position: center;
 }
@@ -55,14 +58,30 @@
   }
 }
 
+.people-card.favorited{
+    .icon{
+      background-image: url('./favorite-person.svg');
+    }
+    .fav-btn{
+      background-color: #FFE400;
+    }
+}
+
 .planet-card{
   .fav-btn{
-    background-color: #AF2BBF;
-
+    background-color: #8000FF;
   }
   .icon{
     background-image: url('./planet.svg');
+  }
+}
 
+.planet-card.favorited{
+  .icon{
+    background-image: url('./favorite-planet.svg');
+  }
+  .fav-btn{
+    background-color: #FFE400;
   }
 }
 
@@ -72,6 +91,15 @@
   }
   .icon{
     background-image: url('./vehicle.svg');
+  }
+}
+
+.vehicle-card.favorited{
+  .icon{
+    background-image: url('./favorite-vehicle.svg');
+  }
+  .fav-btn{
+    background-color: #FFE400;
   }
 }
 
