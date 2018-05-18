@@ -1,6 +1,13 @@
 {
-  "main.css": "static/css/main.e6578cee.css",
-  "main.css.map": "static/css/main.e6578cee.css.map",
-  "main.js": "static/js/main.b1101c41.js",
-  "main.js.map": "static/js/main.b1101c41.js.map"
+  "main.css": "static/css/main.5ed5d345.css",
+  "main.css.map": "static/css/main.5ed5d345.css.map",
+  "main.js": "static/js/main.b7c04e2f.js",
+  "main.js.map": "static/js/main.b7c04e2f.js.map",
+  "static/media/bb8.png": "static/media/bb8.ae39f555.png",
+  "static/media/favorite-person.svg": "static/media/favorite-person.ca0b70a5.svg",
+  "static/media/favorite-planet.svg": "static/media/favorite-planet.df0d0183.svg",
+  "static/media/favorite-vehicle.svg": "static/media/favorite-vehicle.52e23eb1.svg",
+  "static/media/person.svg": "static/media/person.fb474f28.svg",
+  "static/media/planet.svg": "static/media/planet.7879d256.svg",
+  "static/media/vehicle.svg": "static/media/vehicle.170033b7.svg"
 }
